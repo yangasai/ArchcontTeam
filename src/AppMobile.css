@@ -1,0 +1,278 @@
+/* Контейнеры */
+.containerMobile {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.header_menuMobile {
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.header_logoMobile {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 1vh;
+}
+
+
+.container_homeMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.container_descriptionMobile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 1vh;
+}
+
+
+.container_menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    background: #101010;
+    opacity: 0;
+    border-left: 1px solid #ffffff;
+    border-radius: 25px 0 0 25px;
+    right: 10px;
+    top: 0;
+    z-index: 100;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: right 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.container_menu.visible {
+    right: 0;
+    opacity: 0.85;
+}
+
+.container_menu.hidden {
+    right: 10px;
+    opacity: 0;
+}
+
+
+
+/* Параметры текстов */
+.logoMobile {
+    font-family: "Ge Body", serif;
+    font-style: normal;
+    font-size: 1.85rem;
+    margin-left: 1vh;
+}
+
+
+.text_menuMobile {
+    font-family: "Ge Body", serif;
+    font-style: normal;
+    font-size: 2rem;
+    color: #FFFFFF;
+    padding-bottom: 2vh;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.text_descriptionMobile {
+    font-family: 'Roboto Condensed', serif;
+    font-style: normal;
+    font-size: 1rem;
+    background-image: linear-gradient(to left, #ffffff, #999999);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0.45;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 5vh;
+}
+
+
+.categotyMobile {
+    font-family: 'Roboto Condensed', serif;
+    color: #FFFFFF;
+    font-size: 1.05rem;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.45;
+    transition: opacity 0.25s ease-in;
+}
+
+.categotyMobile.active {
+    border-bottom: 2px solid #4643d8;
+    opacity: 1.0;
+}
+
+
+
+/* Кнопки */
+.menuMobile {
+    font-family: "Ge Body", serif;
+    font-style: normal;
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-left: 1vh;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.close_buttonMobile {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    margin: 1vh;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in;
+}
+
+.close_buttonMobile:hover {
+    opacity: 0.45;
+}
+
+
+.menu_items {
+    font-family: 'Roboto Condensed', serif;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin: 2vh 1vh 0 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.BuyMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto Condensed', serif;
+    color: #FFFFFF;
+    font-size: 1.75rem;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-top: 1px solid #FFFFFF;
+    border-radius: 30px 30px 0 0;
+    margin-top: 7vh;
+    padding: 1vh 0 0 3vh;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    box-shadow: inset 0px 4px 4px rgba(255, 251, 251, 0.25);
+    transition: border 0.15s ease-in;
+}
+
+.buy_iconMobile {
+    margin: 0 4.5vh 0 0;
+}
+
+
+
+
+
+/* Медиа */
+@media (max-width: 768px) {
+    .home {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .container_orders {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .container_signIn {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 90%;
+        z-index: 100;
+        transition: right 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    .signInOut_1,
+    .signInOut_2,
+    .signInOut_3 {
+        width: 100%;
+    }
+
+    .container_signIn.visible,
+    .container_orders.visible {
+        right: 10px;
+        opacity: 0.85;
+    }
+
+    .container_signIn.hidden,
+    .container_orders.hidden {
+        right: 20px;
+        opacity: 0;
+    }
+
+    .SignIn {
+        font-size: 1.5rem;
+        width: 143px;
+        height: 66px;
+    }
+
+    .Regis {
+        font-size: 1.5rem;
+        width: 242px;
+        height: 66px;
+    }
+
+    .container_marketItem {
+        box-sizing: border-box;
+        background: transparent;
+        border: none;
+    }
+
+    .text_desc {
+        font-size: 0.8rem;
+    }
+
+    .h_desc {
+        font-size: 1.45rem;
+    }
+
+    .text_price {
+        font-size: 1.05rem;
+    }
+
+    .interactive_button {
+        align-items: center;
+        justify-content: center;
+    }
+
+}

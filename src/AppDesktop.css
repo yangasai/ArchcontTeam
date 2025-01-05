@@ -1,0 +1,785 @@
+body {
+  background-color: #101010;
+  margin: 0;
+  height: 100vh;
+}
+
+
+
+/* Input */
+.inputSignIn {
+  font-family: 'Roboto Condensed', serif;
+  position: relative;
+  margin: 7.5vh 0;
+  color: #FFFFFF;
+}
+
+.inputSignIn input {
+  color: #FFFFFF;
+  padding: 1vh;
+  border: none;
+  border-bottom: 2px solid #4643d8;
+  background: transparent;
+  opacity: 0.65;
+  width: 360px;
+  box-sizing: border-box;
+  transition: opacity 0.3s;
+  caret-color: #ffffff;
+  margin-bottom: 2vh;
+}
+
+.inputSignIn input:hover {
+  opacity: 0.35;
+  outline: none;
+}
+
+.inputSignIn input:focus {
+  opacity: 1.0;
+  outline: none;
+}
+
+
+.inputSignIn label {
+  opacity: 0.75;
+  transition: opacity 0.3s;
+  pointer-events: auto;
+  margin-top: 3.5vh;
+}
+
+.inputSignIn input:hover + label {
+  opacity: 0.35;
+}
+
+.inputSignIn input:focus + label {
+  opacity: 1.0;
+}
+
+
+.inputReg {
+  font-family: 'Roboto Condensed', serif;
+  position: relative;
+  margin: 1.5vh 0;
+  color: #FFFFFF;
+}
+
+.inputReg input {
+  color: #FFFFFF;
+  padding: 1vh;
+  border: none;
+  border-bottom: 2px solid #4643d8;
+  background: transparent;
+  opacity: 0.65;
+  width: 360px;
+  box-sizing: border-box;
+  transition: opacity 0.3s;
+  caret-color: #ffffff;
+  margin-bottom: 1.5vh;
+}
+
+.inputReg input:hover {
+  opacity: 0.35;
+  outline: none;
+}
+
+.inputReg input:focus {
+  opacity: 1.0;
+  outline: none;
+}
+
+
+.inputReg label {
+  opacity: 0.75;
+  transition: opacity 0.3s;
+  pointer-events: auto;
+  margin-top: 2.5vh;
+}
+
+.inputReg input:hover + label {
+  opacity: 0.35;
+}
+
+.inputReg input:focus + label {
+  opacity: 1.0;
+}
+
+
+
+/* Контейнеры */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container_home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3vh;
+}
+
+
+.container_control {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.container_description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+
+.container_interactive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+
+.interactive {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.interactive_button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.header_menu {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1270px;
+  height: 55px;
+  border: 1px solid #FFFFFF;
+  border-radius: 0 0 25px 25px;
+  position: relative;
+}
+
+
+
+.header_logo {
+  box-sizing: border-box;
+  position: absolute;
+  background: #101010;
+  border: 1px solid #FFFFFF;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container_catalog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1vh;
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 0.25s ease-in, transform 0.25s ease-in;
+}
+
+.container_catalog.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.container_orders {
+  box-sizing: border-box;
+  width: 433px;
+  height: 605px;
+  background: #101010;
+  opacity: 0;
+  border: 1px solid #FFFFFF;
+  border-radius: 25px;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 100;
+  transition: right 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+
+.container_market {
+  box-sizing: border-box;
+  background: #101010;
+  border: 0.5px solid #FFFFFF;
+  border-radius: 35px;
+  margin: 0 4vh 6vh 0;
+}
+
+.container_marketItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2vh 0 2vh 0;
+  background: transparent;
+  border: 0.5px solid #FFFFFF;
+  border-radius: 35px 35px 0 0;
+}
+
+
+.container_signIn {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 100;
+  transition: right 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.signInOut_1 {
+  box-sizing: border-box;
+  background: #101010;
+  opacity: 0.9;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  margin-bottom: 2.7vh;
+}
+
+.signInOut_2 {
+  box-sizing: border-box;
+  background: #101010;
+  opacity: 0.9;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px 20px 0 0;
+  padding-bottom: 6vh;
+}
+
+.signInOut_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4643D8;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 20px 20px;
+}
+
+.container_signIn.visible,
+.container_orders.visible {
+  right: calc(50% - 635px);
+  opacity: 0.85;
+}
+
+.container_signIn.hidden,
+.container_orders.hidden {
+  right: 0;
+  opacity: 0;
+}
+
+
+.container_hSignIn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 3.5vh 2.5vh 0 2.5vh;
+}
+
+
+
+/* Шрифты */
+@font-face {
+  font-family: 'Ge Body';
+  src: url('../fonts/GeBody.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('../fonts/RobotoCondensed.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Параметры текстов */
+.logo {
+  text-align: center;
+  font-family: "Ge Body", serif;
+  font-style: normal;
+  font-size: 2rem;
+  padding: 0 2vh 0 2vh;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.text_menu {
+  font-family: "Ge Body", serif;
+  font-style: normal;
+  font-size: 4.5rem;
+  padding: 2vh;
+  color: #FFFFFF;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.text_market {
+  font-family: "Ge Body", serif;
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 35px;
+  color: #FFFFFF;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.text_description {
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-size: 1rem;
+  background-image: linear-gradient(to left, #ffffff, #999999);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0.45;
+  margin: 0 1vh 0 1vh;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.catalog-text {
+  font-family: 'Roboto Condensed', serif;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: font-size 0.2s ease-in;
+}
+
+.catalog-text:hover {
+  font-size: 54px;
+}
+
+
+.text_price {
+  position: absolute;
+  bottom: 1.5vh;
+  left: 1.5vh;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.text_desc {
+  position: absolute;
+  top: 1.5vh;
+  left: 1.5vh;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.h_desc {
+  position: absolute;
+  top: 3.5vh;
+  left: 1.5vh;
+  font-size: 1.75rem;
+  color: #B3B2F4;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.h_order {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin: 4vh 3vh 0 3vh;
+}
+
+.text_order {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-size: 1rem;
+  color: #FFFFFF;
+  opacity: 0.65;
+  margin: 1vh 3vh 0 3vh;
+}
+
+.h_signInOut {
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-size: 1.75rem;
+  color: #FFFFFF;
+  max-width: 30vh;
+}
+
+
+.text {
+  position: absolute;
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  opacity: 0.45;
+  margin: 1.4vh 9.3vh 13.9vh 15vh;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Изображения/кнопки */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.control {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.65;
+  max-width: 100%;
+  height: auto;
+  margin-right: 1vh;
+}
+
+.text_control {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.15s ease-in;
+}
+
+.text_enter {
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  opacity: 0.65;
+  margin-right: 1.5vh;
+  transition: opacity 0.15s ease-in;
+}
+
+.control:hover,
+.text_control:hover,
+.text_enter:hover {
+  opacity: 1.0;
+}
+
+
+.img_main {
+  max-width: 100%;
+  height: auto;
+  margin-right: 4vh;
+  border-radius: 30px;
+}
+
+
+.img_baner {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.img_item {
+  cursor: pointer;
+  opacity: 0.2;
+  transition: opacity 0.25s ease-in;
+}
+
+.img_item:hover {
+  opacity: 0.7;
+}
+
+
+.catalog {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1vh;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.market {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.25s ease-in;
+  padding-right: 15px;
+}
+
+
+.price {
+  position: relative;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  transition: opacity 0.25s ease-in;
+}
+
+.none {
+  position: relative;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+
+.market:hover {
+  opacity: 0.45;
+}
+
+
+.interactive_ui {
+  font-family: 'Roboto Condensed', serif;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  width: 183px;
+  height: 71px;
+  background-color: #101010;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  margin: 0 0 1vh 1vh;
+  cursor: pointer;
+  transition: border 0.15s ease-in, background-color 0.15s ease-in, color 0.15s ease-in;
+}
+
+.interactive_ui:hover {
+  background: #4643d8;
+  color: #000000;
+  border: 1px solid #4643d8;
+}
+
+
+.text_button {
+  background-color: transparent;
+  border: none;
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 28px;
+  margin: 0 1vh 0 1vh;
+  background-image: linear-gradient(to left, #ffffff, #999999);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.15s ease-in;
+}
+
+.text_button:hover {
+  opacity: 1.0;
+}
+
+
+.close_button {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  position: absolute;
+  top: 1vh;
+  right: 1vh;
+  margin: 1vh;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in;
+}
+
+.close_button:hover {
+  opacity: 0.45;
+}
+
+
+.RollUp {
+  font-family: 'Roboto Condensed', serif;
+  color: #4643D8;
+  font-size: 2.65rem;
+  box-sizing: border-box;
+  background: transparent;
+  border: 1px solid #4643D8;
+  border-radius: 20px;
+  margin-left: 10vh;
+  padding: 1.5vh 7vh 1.5vh 7vh;
+  cursor: pointer;
+  transition: border 0.15s ease-in, background-color 0.15s ease-in, color 0.35s ease-in, font-size 0.35s ease-in;
+}
+
+.RollUp:hover {
+  background: #4643d8;
+  color: #000000;
+  border: 1px solid #4643d8;
+  font-size: 2.75rem;
+}
+
+
+.Buy {
+  font-family: 'Roboto Condensed', serif;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 40px;
+  margin-top: 2vh;
+  padding: 1vh 3vh 1vh 3vh;
+  cursor: pointer;
+  transition: border 0.15s ease-in;
+}
+
+.buy_icon {
+  margin: 0 1vh;
+}
+
+.Buy:hover {
+  border: 1px solid #4643d8;
+}
+
+
+.categoty {
+  font-family: 'Roboto Condensed', serif;
+  color: #FFFFFF;
+  font-style: normal;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+  background: transparent;
+  border: 0 solid #4643d8;
+  border-radius: 45px;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: background 0.25s ease-in, opacity 0.25s ease-in, color 0.15s ease-in;
+}
+
+.categoty:hover {
+  opacity: 1.0;
+}
+
+.categoty.active {
+  background: #4643d8;
+  color: #000000;
+  opacity: 1.0;
+}
+
+
+.SignIn {
+  font-family: 'Roboto Condensed', serif;
+  color: #4643d8;
+  font-size: 2.25rem;
+  width: 173px;
+  height: 76px;
+  background-color: transparent;
+  border: 0 #FFFFFF;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-in, background-color 0.15s ease-in, border 0.15s ease-in,color 0.35s ease-out;
+}
+
+.Regis {
+  font-family: 'Roboto Condensed', serif;
+  color: #4643d8;
+  font-size: 2.25rem;
+  width: 258px;
+  height: 76px;
+  background-color: transparent;
+  border: 0 solid #FFFFFF;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-in, background-color 0.15s ease-in, border 0.15s ease-in, color 0.35s ease-out;
+}
+
+.SignIn.active,
+.Regis.active {
+  color: #000000;
+  border: 1px #FFFFFF;
+  background-color: #4643D8;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.h_SignIn {
+  border: none;
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  font-size: 1.75rem;
+  color: #FFFFFF;
+  background: transparent;
+  cursor: pointer;
+  padding: 1.75vh;
+  transition: font-size 0.25s ease-in;
+}
+
+.h_SignIn:hover {
+  font-size: 30px;
+}
+
+
+.password {
+  border: none;
+  font-family: 'Roboto Condensed', serif;
+  font-style: normal;
+  color: #FFFFFF;
+  font-size: 14px;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.25s ease-in;
+  float: right;
+}
+
+.password:hover {
+  opacity: 1.0;
+}
+
+
+/* Эффекты */
+.blur {
+  filter: blur(5px);
+  transition: filter 0.5s ease-out;
+}
+
+.unblur {
+  filter: none;
+  transition: filter 0.25s ease-out;
+}
