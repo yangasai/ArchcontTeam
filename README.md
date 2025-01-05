@@ -24,7 +24,7 @@ This website provides an opportunity to purchase game currency for ZZZ. Get game
 
 
 ## Project template
-- [Figma](https://www.figma.com/design/xpyLOQmSg6UN9tVea81RKA/Untitled?node-id=0-1&t=iVNwkblrpOKObiNs-1)
+- [Figma](https://www.figma.com/design/lEeC75JxwZkaoiuLZAYpsE/Untitled?node-id=0-1&t=cl7jforq0HXULmLV-1)
 - AdobePhotoshop
 
 ## Developers
