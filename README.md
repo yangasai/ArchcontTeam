@@ -18,10 +18,8 @@ This website provides an opportunity to purchase game currency for ZZZ. Get game
 
 
 ## Visual
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/854843e4-a58e-4813-99f4-57b3bd96541a" alt="Visual" style="display:inline-block; margin: 10px;">
-  <img src="https://github.com/user-attachments/assets/9e26d840-05de-4087-9ccf-21cc7d01185b" alt="VisualMobile" style="display:inline-block; margin: 10px;">
-</p>
+![Visual](https://github.com/user-attachments/assets/854843e4-a58e-4813-99f4-57b3bd96541a) ![VisualMobile](https://github.com/user-attachments/assets/9e26d840-05de-4087-9ccf-21cc7d01185b)
+
 
 
 
