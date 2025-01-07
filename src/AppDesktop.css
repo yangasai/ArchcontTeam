@@ -21,7 +21,7 @@ body {
   border-bottom: 2px solid #4643d8;
   background: transparent;
   opacity: 0.65;
-  width: 360px;
+  width: 36vh;
   box-sizing: border-box;
   transition: opacity 0.3s;
   caret-color: #ffffff;
@@ -69,7 +69,7 @@ body {
   border-bottom: 2px solid #4643d8;
   background: transparent;
   opacity: 0.65;
-  width: 360px;
+  width: 36vh;
   box-sizing: border-box;
   transition: opacity 0.3s;
   caret-color: #ffffff;
@@ -707,7 +707,7 @@ body {
   font-family: 'Roboto Condensed', serif;
   color: #4643d8;
   font-size: 2.25rem;
-  width: 173px;
+  width: 17vh;
   height: 76px;
   background-color: transparent;
   border: 0 #FFFFFF;
@@ -720,7 +720,7 @@ body {
   font-family: 'Roboto Condensed', serif;
   color: #4643d8;
   font-size: 2.25rem;
-  width: 258px;
+  width: 26.75vh;
   height: 76px;
   background-color: transparent;
   border: 0 solid #FFFFFF;

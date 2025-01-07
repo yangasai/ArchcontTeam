@@ -173,7 +173,7 @@ function Home({ isBlurred, isHomeVisible, showCatalog, isMobile, isDisabled }) {
 
                     <div className="interactive">
                         <button className="catalog" onClick={showCatalog} disabled={isDisabled}>
-                            <img className="catalog" src="/material/pc/bgcatalog.png" alt="Catalog"></img>
+                            <img className="catalog" src="/material/mobile/bgcatalog.png" alt="Catalog"></img>
                             <span className="catalog-text">Каталог</span>
                         </button>
 

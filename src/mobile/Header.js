@@ -15,7 +15,7 @@ function MobileHeader({showMenu, isBlurred, showHome}) {
             <div className="containerMobile">
                 <div className="header_menuMobile">
                     <img style={{width: '100%', height: 'auto'}} src="/material/mobile/main.png" alt="main"></img>
-                    <button className="menuMobile" style={{position: 'absolute', top: '1px', right: '5px'}} onClick={showMenu}>=</button>
+                    <button className="menuMobile" style={{position: 'absolute', top: '1px', right: '1px'}} onClick={showMenu}>=</button>
                 </div>
 
                 <div className="header_logoMobile">
